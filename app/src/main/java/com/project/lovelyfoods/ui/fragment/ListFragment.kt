@@ -12,11 +12,11 @@ import com.project.lovelyfoods.databinding.FragmentFoodsListBinding
 import com.project.lovelyfoods.viewmodel.factory.FoodsViewModelFactory
 import com.project.lovelyfoods.viewmodel.FoodsListViewModel
 
-class FoodsListFragment : Fragment() {
+class ListFragment : Fragment() {
 
     companion object {
-        fun newInstance(): FoodsListFragment {
-            return FoodsListFragment()
+        fun newInstance(): ListFragment {
+            return ListFragment()
         }
     }
 

@@ -14,7 +14,7 @@ import com.project.lovelyfoods.ui.fragment.dialog.FoodsFormDialog
 import com.project.lovelyfoods.viewmodel.factory.FoodsViewModelFactory
 import com.project.lovelyfoods.viewmodel.FoodsGenerateViewModel
 
-class FoodsMainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private val binding by lazy {
         ActivityFoodsMainBinding.inflate(layoutInflater)
@@ -49,7 +49,7 @@ class FoodsMainActivity : AppCompatActivity() {
 
     private fun createDialogWithFood() {
         viewModel.food.observe(this) { foodResult ->
-            val builder = AlertDialog.Builder(this@FoodsMainActivity)
+            val builder = AlertDialog.Builder(this@MainActivity)
             builder.setTitle("Generated food!")
             builder.setMessage(foodResult.name)
             builder.setPositiveButton("Go to video") { _, _ ->
@@ -71,7 +71,7 @@ class FoodsMainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val startActivityIntent = FoodsOptionsActivity.newIntentFragment(this, item.itemId)
+        val startActivityIntent = OptionsActivity.newIntentFragment(this, item.itemId)
         startActivity(startActivityIntent)
         return true
     }

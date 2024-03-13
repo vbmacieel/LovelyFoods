@@ -7,15 +7,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.project.lovelyfoods.R
 import com.project.lovelyfoods.databinding.ActivityFragmentBinding
-import com.project.lovelyfoods.ui.fragment.FoodsListFragment
+import com.project.lovelyfoods.ui.fragment.ListFragment
 
-class FoodsOptionsActivity : AppCompatActivity() {
+class OptionsActivity : AppCompatActivity() {
 
     companion object {
         private const val EXTRA_FRAGMENT_CLASS = "extra.fragment.class"
 
         fun newIntentFragment(packageContext: Context, fragmentId: Int): Intent =
-            Intent(packageContext, FoodsOptionsActivity::class.java)
+            Intent(packageContext, OptionsActivity::class.java)
                 .putExtra(EXTRA_FRAGMENT_CLASS, fragmentId)
     }
 
@@ -38,7 +38,7 @@ class FoodsOptionsActivity : AppCompatActivity() {
 
     private fun createFragment(optionSelected: Int): Fragment {
         when (optionSelected) {
-            R.id.foods_list -> return FoodsListFragment.newInstance()
+            R.id.foods_list -> return ListFragment.newInstance()
             else -> throw IllegalArgumentException("This fragment don't exist!")
         }
     }

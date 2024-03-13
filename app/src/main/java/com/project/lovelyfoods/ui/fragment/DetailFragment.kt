@@ -6,17 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.project.lovelyfoods.databinding.FragmentFoodsDetailBinding
-import com.project.lovelyfoods.model.Food
 import com.project.lovelyfoods.viewmodel.FoodsDetailViewModel
 import com.project.lovelyfoods.viewmodel.factory.FoodsViewModelFactory
 
-class FoodsDetailFragment: Fragment() {
+class DetailFragment: Fragment() {
 
     companion object {
-        fun newInstance(foodId: String): FoodsDetailFragment {
+        fun newInstance(foodId: String): DetailFragment {
             val args = Bundle()
             args.putString(foodId, "foodId")
-            val fragment = FoodsDetailFragment()
+            val fragment = DetailFragment()
             fragment.arguments = args
             return fragment
         }
