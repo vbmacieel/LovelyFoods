@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.project.lovelyfoods.databinding.FragmentFoodsDetailBinding
+import com.project.lovelyfoods.databinding.FragmentDetailBinding
 import com.project.lovelyfoods.viewmodel.FoodsDetailViewModel
 import com.project.lovelyfoods.viewmodel.factory.FoodsViewModelFactory
 
@@ -26,7 +26,7 @@ class DetailFragment: Fragment() {
     }
 
     private val binding by lazy {
-        FragmentFoodsDetailBinding.inflate(layoutInflater)
+        FragmentDetailBinding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

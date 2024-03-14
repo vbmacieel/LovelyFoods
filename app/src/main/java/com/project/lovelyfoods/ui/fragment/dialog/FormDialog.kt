@@ -6,14 +6,14 @@ import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
-import com.project.lovelyfoods.databinding.FragmentFoodsFormBinding
-import com.project.lovelyfoods.viewmodel.factory.FoodsViewModelFactory
+import com.project.lovelyfoods.databinding.FragmentFormBinding
 import com.project.lovelyfoods.viewmodel.FoodsFormViewModel
+import com.project.lovelyfoods.viewmodel.factory.FoodsViewModelFactory
 
-class FoodsFormDialog : DialogFragment() {
+class FormDialog : DialogFragment() {
 
     private val binding by lazy {
-        FragmentFoodsFormBinding.inflate(layoutInflater)
+        FragmentFormBinding.inflate(layoutInflater)
     }
 
     private val viewModel by lazy {

@@ -9,15 +9,15 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.project.lovelyfoods.R
-import com.project.lovelyfoods.databinding.ActivityFoodsMainBinding
-import com.project.lovelyfoods.ui.fragment.dialog.FoodsFormDialog
-import com.project.lovelyfoods.viewmodel.factory.FoodsViewModelFactory
+import com.project.lovelyfoods.databinding.ActivityMainBinding
+import com.project.lovelyfoods.ui.fragment.dialog.FormDialog
 import com.project.lovelyfoods.viewmodel.FoodsGenerateViewModel
+import com.project.lovelyfoods.viewmodel.factory.FoodsViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
     private val binding by lazy {
-        ActivityFoodsMainBinding.inflate(layoutInflater)
+        ActivityMainBinding.inflate(layoutInflater)
     }
 
     private val viewModel by lazy {
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnNewFood.setOnClickListener {
-            val formDialog = FoodsFormDialog()
+            val formDialog = FormDialog()
             formDialog.show(supportFragmentManager, "formFragment")
         }
 

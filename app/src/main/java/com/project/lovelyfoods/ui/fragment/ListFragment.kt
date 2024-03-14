@@ -8,9 +8,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.lovelyfoods.adapter.FoodsListAdapter
-import com.project.lovelyfoods.databinding.FragmentFoodsListBinding
-import com.project.lovelyfoods.viewmodel.factory.FoodsViewModelFactory
+import com.project.lovelyfoods.databinding.FragmentListBinding
 import com.project.lovelyfoods.viewmodel.FoodsListViewModel
+import com.project.lovelyfoods.viewmodel.factory.FoodsViewModelFactory
 
 class ListFragment : Fragment() {
 
@@ -21,7 +21,7 @@ class ListFragment : Fragment() {
     }
 
     private val binding by lazy {
-        FragmentFoodsListBinding.inflate(layoutInflater)
+        FragmentListBinding.inflate(layoutInflater)
     }
 
     private lateinit var viewModel: FoodsListViewModel

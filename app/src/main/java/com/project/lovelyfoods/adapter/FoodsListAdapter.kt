@@ -5,7 +5,7 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.project.lovelyfoods.databinding.ItemFoodsListBinding
+import com.project.lovelyfoods.databinding.ItemListBinding
 import com.project.lovelyfoods.model.Food
 
 class FoodsListAdapter : RecyclerView.Adapter<FoodsListAdapter.FoodsListViewHolder>() {
@@ -17,7 +17,7 @@ class FoodsListAdapter : RecyclerView.Adapter<FoodsListAdapter.FoodsListViewHold
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodsListViewHolder {
-        val binding = ItemFoodsListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return FoodsListViewHolder(binding)
     }
 
@@ -40,7 +40,7 @@ class FoodsListAdapter : RecyclerView.Adapter<FoodsListAdapter.FoodsListViewHold
     override fun getItemCount(): Int = foodsList.size
 
     inner class FoodsListViewHolder(
-        private val binding: ItemFoodsListBinding
+        private val binding: ItemListBinding
     ) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(food: Food) {
